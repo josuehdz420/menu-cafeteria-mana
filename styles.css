@@ -1,0 +1,68 @@
+/* Paleta de colores */
+:root {
+    --cafe-claro: #734D1F;
+    --texto: #F2DDD0;
+    --cafe-oscuro: #401201;
+    --cafe-medio: #733A26;
+    --cafe-muy-oscuro: #260801;
+}
+
+/* General */
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--cafe-claro);
+    color: var(--texto);
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header */
+header {
+    background-color: var(--cafe-oscuro);
+    padding: 20px;
+}
+
+.logo {
+    width: 100px;
+    height: auto;
+}
+
+h1 {
+    margin: 10px 0;
+}
+
+/* Menú */
+.menu {
+    padding: 20px;
+}
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    max-width: 800px;
+    margin: auto;
+}
+
+.menu-item {
+    background-color: var(--cafe-medio);
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.menu-item img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.menu-item h3 {
+    margin: 10px 0;
+}
+
+/* Footer */
+footer {
+    background-color: var(--cafe-muy-oscuro);
+    padding: 10px;
+    margin-top: 20px;
+}

@@ -1,0 +1,5 @@
+#734D1F Café claro (posiblemente el fondo principal)
+#F2DDD0 Para letras o texto principal
+#401201 Café oscuro casi ocre (posiblemente para fondo secundario)
+#733A26 Café un poco más claro (posiblemente para fondo secundario)
+#260801 Café super oscuro (posiblemente para fondo terciario o tipo sombra)
