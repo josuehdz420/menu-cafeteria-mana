@@ -3,3 +3,17 @@
 #401201 Café oscuro casi ocre (posiblemente para fondo secundario)
 #733A26 Café un poco más claro (posiblemente para fondo secundario)
 #260801 Café super oscuro (posiblemente para fondo terciario o tipo sombra)
+
+Bien ya todo eso, ahora me gustaría que me ayudaras a implementar ciertas cosas que me gustaría incluir en la página (esto en caso que sean posibles):
+1. Filtros por categoría: Básicamente sería como hacer un menu que tenga botones de categorías (como bebidas, pupusas, tacos (claramente esto será más completo cuando tengamos el menú oficial a detalle, pero podemos al menos crear el molde)), la idea es que al presionar, solo se muestren los elementos de esa categoría. Esto se puede hacer con JavaScript y CSS 
+2. Botón de WhatsApp y Facebook: Esto para que el de WhatsApp si quiere aceptar pedidos por la plataforma, como agregar un botón para que abra el chat con un mensaje prellenado como "Hola, quiero hacer un pedido". Y en el caso de Facebook simplemente un botón que redirija a la página de Facebook (obviamente cada uno de estos serían iconos).
+3. Animaciones suaves y atractivas: Con CSS pienso que se puede agregar efectos de aparición o desplazamiento cuando el usuario se desplaze por la página, haciendo la experiencia más atractiva.
+4. Un pequeño "Sobre nosotros" o historia del negocio: Básicamente algo corto que cuente la historia de la cafetería y lo que la hace especial. Pienso que a algunos clientes les gustaría conocer más sobre el lugar donde comen.
+5. Animaciones de carga: Como la página se espera que tenga muchas imagenes, se podría usar animación de carga mientras se visualizan para que no se vea en blanco mientras cargan
+6. Feedback visual al tocar elemento: Algo simple como cambiar el color o hacer un pequeño "rebote" al presionar un botón puede mejorar la experiencia del usuario.
+7. Scroll infinito para categorías: O sea, en caso de que el menú sea un poco extenso, se podría implementar un scroll infinito para que al hacer el scroll hacia abajo, los platillos o categorías vayan cargando sin que el usuario tenga que cambiar de página. Esto podría mejorarse con un poco de JavaScript.
+8. Animación al pasar el ratón sobre los elementos: Cuando el usuario pase el ratón sobre un platillo o botón, se podría agregar una animación de escala o sombra para hacerlo más atractivo y hacer feedback visual.
+9. Por último diseño responsivo o "responsive design": Esto para que la página web se adapte automaticamente a diferentes tamaños de pantalla, ya sea en una computadora, una tablet, pero especialmente para teléfonos movil (que en su mayoría lo usarán).
+
+Y eso es todo, no olvides que lo más importante es que se vea estético desde cualquier lado, usa las paletas de colores como mejor lo puedas hacer, y si quieres agregar tampoco hay problema (siempre y cuando no se salga de la esencia principal).
+La idea es tener todo esto listo, para después solo agregar el menú oficial y darle vida a la página.

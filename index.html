@@ -3,33 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Menú - Cafetería Maná</title>
+    <title>Cafetería Maná - Menú Digital</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
     <header>
-        <img src="assets/logo.jpg" alt="Logo Cafetería Maná" class="logo">
+        <img src="assets/logo.jpg" alt="Cafetería Maná" class="logo">
         <h1>Cafetería Maná</h1>
     </header>
 
     <section class="menu">
         <h2>Menú</h2>
+        <div class="filter-buttons">
+            <button class="filter-btn" data-category="all">Todos</button>
+            <button class="filter-btn" data-category="pupusas">Pupusas</button>
+            <button class="filter-btn" data-category="bebidas">Bebidas</button>
+            <button class="filter-btn" data-category="tacos">Tacos</button>
+        </div>
+
         <div class="menu-grid">
-            <div class="menu-item">
+            <div class="menu-item" data-category="pupusas">
                 <img src="assets/pupusa.png" alt="Pupusa">
                 <h3>Pupusa de Queso</h3>
                 <p>$1.00</p>
             </div>
-            <div class="menu-item">
+            <div class="menu-item" data-category="bebidas">
                 <img src="assets/cafe.png" alt="Café">
                 <h3>Café Tradicional</h3>
                 <p>$1.50</p>
             </div>
+            <div class="menu-item" data-category="tacos">
+                <img src="assets/taco.png" alt="Tacos">
+                <h3>Tacos de Birria</h3>
+                <p>$4.50</p>
+            </div>
         </div>
     </section>
 
+    <section class="about hidden">
+        <h2>Sobre Nosotros</h2>
+        <p>Desde hace años, Cafetería Maná ha sido el lugar donde las personas disfrutan de deliciosos platillos caseros. Nos especializamos en comida tradicional con el mejor sabor.</p>
+    </section>
+
     <footer>
-        <p>© 2025 Cafetería Maná | Contacto: 123-456-7890</p>
+        <div class="social-buttons">
+            <a href="https://wa.me/61113720?text=Hola,%20quiero%20hacer%20un%20pedido" target="_blank">
+                <img src="assets/whatsapp.png" alt="WhatsApp">
+            </a>
+            <a href="https://www.facebook.com/profile.php?id=61565861471499" target="_blank">
+                <img src="assets/facebook.png" alt="Facebook">
+            </a>
+        </div>
+        <p>&copy; 2025 Cafetería Maná. Todos los derechos reservados.</p>
     </footer>
 
     <script src="script.js"></script>
