@@ -27,6 +27,16 @@ document.querySelectorAll(".menu-item img").forEach(img => {
     img.onload = () => img.classList.add("loaded");
 });
 
+// Recargar imágenes fallidas automáticamente
+document.querySelectorAll("img").forEach(img => {
+    img.addEventListener("error", () => {
+        console.log(`Intentando recargar: ${img.src}`);
+        setTimeout(() => {
+            img.src = img.src + "?reload=" + new Date().getTime(); // Forzar recarga con un parámetro adicional.
+        }, 1000); // Esperar 1 segundo antes de recargar.
+    });
+});
+
 /*// Scroll infinito para categorías
 let page = 1;
 window.addEventListener("scroll", function() {
