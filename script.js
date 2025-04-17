@@ -21,8 +21,9 @@ document.addEventListener("scroll", function() {
     });
 });
 
-// Animación de carga para imágenes
+// Animación de carga para imágenes con Lazy Loading
 document.querySelectorAll(".menu-item img").forEach(img => {
+    img.setAttribute("loading", "lazy"); // Activa la carga diferida en las imágenes
     img.onload = () => img.classList.add("loaded");
 });
 
@@ -37,7 +38,7 @@ window.addEventListener("scroll", function() {
 function loadMoreItems() {
     let newItem = document.createElement("div");
     newItem.className = "menu-item";
-    newItem.innerHTML = `<img src="assets/taco.jpg" alt="Taco">
+    newItem.innerHTML = `<img src="assets/taco.jpg" alt="Taco" loading="lazy"> <!-- Lazy loading aquí -->
                          <h3>Taco de Birria</h3>
                          <p>$2.00</p>`;
     document.querySelector(".menu-grid").appendChild(newItem);
