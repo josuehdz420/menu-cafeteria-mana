@@ -1,3 +1,5 @@
+RESOLUCIÓNN DE IMAGENES: 400 x 300 Pixeles
+
 #734D1F Café claro (posiblemente el fondo principal)
 #F2DDD0 Para letras o texto principal
 #401201 Café oscuro casi ocre (posiblemente para fondo secundario)
