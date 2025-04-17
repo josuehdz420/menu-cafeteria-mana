@@ -74,6 +74,20 @@ h1 {
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
 }
 
+.menu-item p:hover {
+    transform: scale(1.1); /* Incrementa el tamaño ligeramente */
+    color: #FF4500; /* Cambia a un color más vibrante */
+    transition: all 0.3s ease;
+}
+
+.menu-item h3 {
+    margin-bottom: 5px; /* Reduce espacio debajo del nombre */
+}
+
+.menu-item p {
+    margin-top: 10px; /* Mayor separación del nombre */
+}
+
 .menu-item img {
     width: 90%;
     height: 200px; /* Mantén un tamaño uniforme */
