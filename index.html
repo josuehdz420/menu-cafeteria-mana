@@ -3,116 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cafetería Maná - Menú Digital</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Cafetería Maná - Bienvenida</title>
+    <link rel="stylesheet" href="stylesfondo.css">
 </head>
 <body>
-
-    <header>
-        <img src="assets/logo.jpg" alt="Cafetería Maná" class="logo">
-        <h1>Cafetería Maná</h1>
-    </header>
-
-    <section class="menu">
-        <h2>Menú</h2>
-        <div class="filter-buttons">
-            <button class="filter-btn" data-category="all">Todos</button>
-            <button class="filter-btn" data-category="pupusas">Pupusas</button>
-            <button class="filter-btn" data-category="bebidas">Bebidas</button>
-            <button class="filter-btn" data-category="tacos y burritos">Tacos</button>
-        </div>
-
-        <div class="menu-grid">
-            <div class="menu-item" data-category="pupusas">
-                <img src="assets/pupusaqueso.jpg" alt="Pupusa Queso">
-                <h3>Pupusa de Queso</h3>
-                <p>💲0.75</p>
-            </div>
-            <div class="menu-item" data-category="pupusas">
-                <img src="assets/pupusarevueltas.jpg" alt="Pupusa Revuelta">
-                <h3>Pupusa Revuelta</h3>
-                <p>💲0.75</p>
-            </div>
-            <div class="menu-item" data-category="pupusas">
-                <img src="assets/pupusafrijolqueso.jpg" alt="Pupusa FrijolQueso">
-                <h3>Pupusa Frijol con Queso</h3>
-                <p>💲0.75</p>
-            </div>
-            <div class="menu-item" data-category="pupusas">
-                <img src="assets/pupusaloca.jpg" alt="Pupusa Loca">
-                <h3>Pupusa Loca</h3>
-                <p>💲1.25</p>
-            </div>
-            <div class="menu-item" data-category="bebidas">
-                <img src="assets/cafe.jpg" alt="Café">
-                <h3>Café Tradicional</h3>
-                <p>💲1.50</p>
-            </div>
-            <div class="menu-item" data-category="bebidas">
-                <img src="assets/tropicalfresa.jpg" alt="Tropical Fresa Vidrio">
-                <h3>Tropical Fresa Vidrio</h3>
-                <p>💲1.00</p>
-            </div>
-            <div class="menu-item" data-category="bebidas">
-                <img src="assets/tropicalfresalata.jpg" alt="Tropical Fresa Lata">
-                <h3>Tropical Fresa Lata</h3>
-                <p>💲0.75</p>
-            </div>
-            <div class="menu-item" data-category="bebidas">
-                <img src="assets/tropicaluva.jpg" alt="Tropical Uva Vidrio">
-                <h3>Tropical Uva Vidrio</h3>
-                <p>💲1.00</p>
-            </div>
-            <div class="menu-item" data-category="bebidas">
-                <img src="assets/tropicaluvalata.jpg" alt="Tropical Uva Lata">
-                <h3>Tropical Uva Lata</h3>
-                <p>💲0.75</p>
-            </div>
-            <div class="menu-item" data-category="bebidas">
-                <img src="assets/tropicalcremasoda.jpg" alt="Tropical Crema Vidrio">
-                <h3>Tropical Crema Soda Vidrio</h3>
-                <p>💲1.00</p>
-            </div>
-            <div class="menu-item" data-category="bebidas">
-                <img src="assets/tropicalcremasodalata.jpg" alt="Tropical Crema Lata">
-                <h3>Tropical Crema Soda Lata</h3>
-                <p>💲0.75</p>
-            </div>
-            <div class="menu-item" data-category="bebidas">
-                <img src="assets/maruchancamaronpiquin.jpg" alt="Maruchan">
-                <h3>Sopa Maruchán de Camarón (Chile Piquín)</h3>
-                <p>💲1.25</p>
-            </div>
-            <div class="menu-item" data-category="tacos y burritos">
-                <img src="assets/burrito.jpg" alt="Burritos">
-                <h3>Burritos</h3>
-                <p>💲2.50</p>
-            </div>
-            <div class="menu-item" data-category="tacos y burritos">
-                <img src="assets/taco.jpg" alt="Tacos">
-                <h3>Tacos de Birria</h3>
-                <p>💲4.50</p>
-            </div>
+    <section id="welcome" class="welcome-section">
+        <div class="welcome-container">
+            <h1 class="welcome-title">¡Bienvenido a Cafetería Maná!</h1>
+            <p class="welcome-message">"Donde cada platillo es una bendición 🙏"</p>
+            <button class="btn-menu" onclick="goToMenu()">Ir al Menú</button>
         </div>
     </section>
 
-    <section class="about hidden">
-        <h2>Sobre Nosotros</h2>
-        <p>En Cafetería Maná, creemos que cada día es una bendición. Inspirados por el maná que Dios proporcionó, nuestro objetivo es ofrecerte un espacio donde puedas disfrutar de una comida deliciosa, llena de sabor y amor 🤍</p>
-    </section>
+    <script>
+        // Mensajes dinámicos para el subtítulo
+        const messages = [
+    "En Cafetería Maná, cada día es una bendición que se disfruta con sabor y amor 🙏.",
+    "Inspirados por el maná que Dios proporcionó, te ofrecemos momentos deliciosos 🤍.",
+    "Cafetería Maná: tu espacio para bendecir tu día con comida y alegría 🌟.",
+    "Saborea la bendición de cada día en Cafetería Maná 🍽️.",
+    "Un lugar donde el amor y la comida se unen para alegrar tu vida 😊.",
+    "Donde cada platillo tiene el propósito de llenar tu día de bendiciones 🙌.",
+    "Déjanos ser la bendición que acompaña tus días felices en Cafetería Maná ☕.",
+    "Más que una cafetería, somos un espacio de sabor, amor y gratitud ✨.",
+    "Inspirados por el amor de Dios, te ofrecemos el sabor más especial ❤️.",
+    "Cada plato está preparado con amor para bendecir tu día 🤍.",
+    "Disfruta nuestras pupusas hechas con tradición y sabor único 🌮.",
+    "El café que alegra tus días está aquí, en Cafetería Maná ☕.",
+    "Prueba nuestros tacos de birria: una explosión de sabor que no olvidarás 🌟.",
+    "Las bebidas tropicales te esperan para refrescar tu día 🍹.",
+    "Burritos, tacos, pupusas y mucho más para deleitar tus sentidos 🌮🥤.",
+    "Desde el café hasta las pupusas, cada bocado es una bendición 🍴.",
+    "¡Pupusas, tacos, burritos y más para compartir con quienes amas! ❤️.",
+    "Tu lugar favorito para disfrutar sabores únicos con tu familia y amigos 🍽️.",
+    "El café perfecto para tus mañanas y las pupusas ideales para tu almuerzo 🕊️.",
+    "Ven por el sabor, quédate por el amor que ponemos en cada detalle 🤗.",
+    "En Cafetería Maná, cada platillo es una bendición para tus sentidos ✨.",
+    "Donde el maná de Dios se transforma en comida deliciosa para ti 🍴.",
+    "Te esperamos con el café que alegra tus mañanas y sabores que reconfortan tu alma ☕.",
+    "Nuestro objetivo es ofrecerte comida deliciosa, llena de sabor y gratitud 🙏.",
+    "Cafetería Maná: un espacio lleno de bendiciones, sabor y amor para ti 💖."
+];
 
-    <footer>
-        <div class="social-buttons">
-            <a href="https://wa.me/61113720?text=Hola,%20quiero%20hacer%20un%20pedido" target="_blank">
-                <img src="assets/whatsapp.png" alt="WhatsApp">
-            </a>
-            <a href="https://www.facebook.com/profile.php?id=61565861471499" target="_blank">
-                <img src="assets/facebook.png" alt="Facebook">
-            </a>
-        </div>
-        <p>&copy; 2025 Cafetería Maná. Todos los derechos reservados.</p>
-    </footer>
+        // Mostrar un mensaje aleatorio al cargar la página
+        window.addEventListener("DOMContentLoaded", () => {
+            const welcomeMessage = document.querySelector(".welcome-message");
+            const randomMessage = messages[Math.floor(Math.random() * messages.length)];
+            welcomeMessage.textContent = randomMessage;
+        });
 
-    <script src="script.js"></script>
+        // Navegar al menú
+        function goToMenu() {
+            window.location.href = "menu.html"; // Redirige a la página del menú
+        }
+    </script>
 </body>
 </html>

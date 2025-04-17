@@ -1,3 +1,155 @@
+.menu {
+    position: relative; /* Para gestionar el fondo correctamente */
+    padding: 40px 20px; /* Espaciado interno */
+    color: var(--texto); /* Mantén el texto legible */
+    overflow: hidden; /* Asegura que no haya desbordes */
+}
+
+/* Fondo difuminado */
+.menu::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("assets/menufondo.jpg"); /* Imagen personalizada */
+    background-size: cover; /* Ajusta el tamaño del fondo */
+    background-position: center; /* Restaura la posición original de la imagen */
+    filter: blur(5px); /* Aplica desenfoque solo al fondo */
+    z-index: 1; /* Envía el fondo detrás del contenido */
+    opacity: 0.85; /* Oscurece ligeramente el fondo */
+}
+
+/* Contenido del menú */
+.menu h2, .menu-grid, .filter-buttons {
+    position: relative;
+    z-index: 2; /* Asegura que el contenido esté por encima del fondo */
+}
+
+
+.menu h2 {
+    font-size: 3.5em; /* Texto grande */
+    font-weight: bold; /* Negrita para resaltar */
+    color: #FFD700; /* Color dorado */
+    text-shadow: 3px 3px 15px rgba(0, 0, 0, 0.8); /* Sombras para destacar */
+    text-transform: uppercase; /* Convierte el texto a mayúsculas */
+    letter-spacing: 3px; /* Espaciado entre letras */
+    margin-bottom: 30px; /* Espaciado inferior */
+    position: relative; /* Necesario para aplicar el fondo */
+    animation: float 3s ease-in-out infinite; /* Animación constante */
+}
+
+/* Fondo negro difuminado detrás del título */
+.menu h2::before {
+    content: "";
+    position: absolute;
+    top: 50%; /* Posición centrada verticalmente */
+    left: 50%; /* Posición centrada horizontalmente */
+    transform: translate(-50%, -50%); /* Centrado absoluto */
+    width: 100%; /* Cubre el ancho del texto */
+    height: 100%; /* Cubre la altura del texto */
+    background-color: rgba(0, 0, 0, 0.6); /* Fondo negro con transparencia */
+    filter: blur(5px); /* Difumina el fondo */
+    border-radius: 10px; /* Bordes redondeados */
+    z-index: -1; /* Envía el fondo detrás del texto */
+}
+
+/* Animación constante para movimiento fluido */
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px); /* Sube ligeramente */
+    }
+    100% {
+        transform: translateY(0); /* Regresa a la posición original */
+    }
+}
+
+
+/* Efecto de brillo en el título */
+@keyframes glow {
+    from {
+        text-shadow: 0 0 5px #FFD700, 0 0 10px #FFD700, 0 0 20px #FFD700;
+    }
+    to {
+        text-shadow: 0 0 10px #FFAA00, 0 0 20px #FFAA00, 0 0 30px #FFAA00;
+    }
+}
+
+/* Decoración debajo del título */
+.menu h2::after {
+    content: "";
+    display: block;
+    width: 50px; /* Longitud de la línea decorativa */
+    height: 5px; /* Altura de la línea */
+    background-color: #FFD700; /* Línea dorada */
+    margin: 10px auto 0; /* Centra la línea y ajusta espaciado */
+    border-radius: 5px; /* Bordes redondeados */
+}
+
+/* Fondo para la sección "Sobre Nosotros" */
+.about {
+    background-color: rgba(0, 0, 0, 0.85); /* Fondo oscuro con transparencia */
+    color: #FFFFFF; /* Texto blanco para visibilidad */
+    padding: 40px 20px; /* Espaciado interno */
+    border-radius: 10px; /* Bordes redondeados */
+    max-width: 900px;
+    margin: 20px auto; /* Centra el contenido */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); /* Sombras elegantes */
+}
+
+.filter-buttons button {
+    background-color: var(--cafe-medio); /* Color base */
+    color: var(--texto); /* Texto legible */
+    border-radius: 5px; /* Bordes redondeados */
+    border: none; /* Sin bordes */
+    padding: 10px 20px; /* Espaciado interno */
+    margin: 5px; /* Espaciado entre botones */
+    cursor: pointer; /* Indica que son interactivos */
+    font-size: 1.2em; /* Tamaño del texto */
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    animation: bounce 2s infinite ease-in-out; /* Animación de movimiento fluido */
+}
+
+/* Animación constante para los botones */
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0); /* Posición original */
+    }
+    50% {
+        transform: translateY(-5px); /* Se eleva ligeramente */
+    }
+}
+
+/* Efecto hover adicional */
+.filter-buttons button:hover {
+    transform: scale(1.1); /* Agranda el botón al pasar el cursor */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Sombras dinámicas */
+    background-color: #FFD700; /* Color dorado al hacer hover */
+    color: #000; /* Texto oscuro para contraste */
+}
+
+.filter-buttons button:hover {
+    background-color: #FFD700; /* Color dorado al pasar el cursor */
+    color: #000;
+    transform: scale(1.05); /* Efecto de hover */
+}
+
+/* Animación de entrada para los mensajes */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 /* Paleta de colores */
 :root {
     --cafe-claro: #DBA56B; /* Tonos más suaves */
