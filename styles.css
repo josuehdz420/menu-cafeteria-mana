@@ -1,10 +1,10 @@
 /* Paleta de colores */
 :root {
-    --cafe-claro: #734D1F;
-    --texto: #F2DDD0;
-    --cafe-oscuro: #401201;
-    --cafe-medio: #733A26;
-    --cafe-super-oscuro: #260801;
+    --cafe-claro: #DBA56B; /* Tonos más suaves */
+    --texto: #F5F5F5;
+    --cafe-oscuro: #593818;
+    --cafe-medio: #7A4F38;
+    --cafe-super-oscuro: #3E261A;
 }
 
 body {
@@ -24,6 +24,7 @@ header {
 .logo {
     width: 100px;
     border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombra moderna */
 }
 
 h1 {
@@ -42,12 +43,14 @@ h1 {
     margin: 5px;
     cursor: pointer;
     border-radius: 5px;
-    transition: transform 0.2s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
 }
 
 .filter-btn:hover {
     transform: scale(1.1);
-    background-color: var(--cafe-oscuro);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    background-color: var(--cafe-super-oscuro);
 }
 
 .menu-grid {
@@ -61,17 +64,23 @@ h1 {
     background-color: var(--cafe-medio);
     padding: 15px;
     border-radius: 10px;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 0.5s ease-in-out;
 }
 
 .menu-item:hover {
     transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
 }
 
 .menu-item img {
-    width: 100%;
+    width: 90%;
+    height: 200px; /* Mantén un tamaño uniforme */
+    object-fit: contain; /* Mantiene la imagen completa y proporcional */
     border-radius: 10px;
-    opacity: 0;
+    background-color: var(--cafe-super-oscuro); /* Fondo para rellenar el espacio vacío */
+    padding: 5px; /* Espaciado opcional */
     transition: opacity 0.5s ease-in-out;
 }
 
@@ -101,26 +110,33 @@ h1 {
 .social-buttons img {
     width: 40px;
     margin: 10px;
-    transition: transform 0.3s ease;
+    transition: transform 0.5s ease;
 }
 
 .social-buttons img:hover {
-    transform: scale(1.2);
+    transform: rotate(10deg) scale(1.2);
+}
+
+/* Animaciones adicionales */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
 }
 
 @media (max-width: 768px) {
     .menu-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, 1fr); /* Dos columnas para pantallas pequeñas */
+        gap: 15px; /* Espacio entre los elementos */
+        padding: 10px; /* Ajustar el padding para mejorar la presentación */
     }
 
-    .filter-buttons {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    .filter-btn {
-        flex: 1 1 45%;
-        margin: 5px;
+    .menu-item {
+        padding: 10px; /* Reduce ligeramente el espacio interno */
     }
 }
