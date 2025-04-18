@@ -1,3 +1,11 @@
+document.addEventListener("DOMContentLoaded", () => {
+    const darkModeToggle = document.getElementById("dark-mode-toggle");
+    darkModeToggle.addEventListener("change", () => {
+        document.body.classList.toggle("dark-mode", darkModeToggle.checked);
+    });
+});
+
+
 // Filtros por categoría
 document.querySelectorAll(".filter-btn").forEach(button => {
     button.addEventListener("click", function() {
@@ -45,3 +53,31 @@ function loadMoreItems() {
 }*/
 
 console.log("⚠️ Scroll infinito desactivado temporalmente.");
+
+// Buscador interactivo
+document.addEventListener("DOMContentLoaded", () => {
+    const searchBar = document.getElementById("search-bar");
+    const noResultsMessage = document.getElementById("no-results");
+    const menuItems = document.querySelectorAll(".menu-item");
+
+    searchBar.addEventListener("input", function () {
+        const query = this.value.toLowerCase(); // Texto introducido por el usuario
+        let hasResults = false; // Bandera para verificar si hay resultados
+
+        menuItems.forEach(item => {
+            const productName = item.querySelector("h3").textContent.toLowerCase(); // Nombre del producto
+            if (productName.includes(query)) {
+                item.style.display = "block"; // Mostrar productos que coincidan
+                hasResults = true; // Hay al menos un resultado
+            } else {
+                item.style.display = "none"; // Ocultar productos que no coincidan
+            }
+        });
+
+        // Mostrar el mensaje si no hay resultados
+        noResultsMessage.style.display = hasResults ? "none" : "block";
+    });
+
+    // Ocultar el mensaje al cargar la página
+    noResultsMessage.style.display = "none";
+});

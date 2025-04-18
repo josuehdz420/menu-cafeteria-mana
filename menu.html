@@ -1,5 +1,9 @@
 <!DOCTYPE html>
 <html lang="es">
+    <div class="dark-mode-switch">
+        <input type="checkbox" id="dark-mode-toggle" />
+        <label for="dark-mode-toggle">Modo Oscuro</label>
+    </div>    
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,13 +16,19 @@
         <h1>Cafetería Maná</h1>
     </header>
 
+    <!--<div id="notification-bar">🎉 ¡Promoción especial en café tradicional! ☕</div>-->
+
     <section class="menu" id="menu">
         <h2>Menú</h2>
+        <div id="search-container">
+            <input type="text" id="search-bar" placeholder="Buscar producto..." />
+            <p id="no-results">No se encontraron resultados. Por favor intenta nuevamente. 🙁</p>
+        </div>
         <div class="filter-buttons">
             <button class="filter-btn" data-category="all">Todos</button>
             <button class="filter-btn" data-category="pupusas">Pupusas</button>
             <button class="filter-btn" data-category="bebidas">Bebidas</button>
-            <button class="filter-btn" data-category="tacos y burritos">Tacos</button>
+            <button class="filter-btn" data-category="otros">Otros</button>
         </div>
 
         <div class="menu-grid">
@@ -77,17 +87,17 @@
                 <h3>Tropical Crema Soda Lata</h3>
                 <p>💲0.75</p>
             </div>
-            <div class="menu-item" data-category="bebidas">
+            <div class="menu-item" data-category="otros">
                 <img src="assets/maruchancamaronpiquin.jpg" alt="Maruchan">
                 <h3>Sopa Maruchán de Camarón (Chile Piquín)</h3>
                 <p>💲1.25</p>
             </div>
-            <div class="menu-item" data-category="tacos y burritos">
+            <div class="menu-item" data-category="otros">
                 <img src="assets/burrito.jpg" alt="Burritos">
                 <h3>Burritos</h3>
                 <p>💲2.50</p>
             </div>
-            <div class="menu-item" data-category="tacos y burritos">
+            <div class="menu-item" data-category="otros">
                 <img src="assets/taco.jpg" alt="Tacos">
                 <h3>Tacos de Birria</h3>
                 <p>💲4.50</p>

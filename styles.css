@@ -306,3 +306,273 @@ h1 {
         padding: 10px; /* Reduce ligeramente el espacio interno */
     }
 }
+
+/* Contenedor del buscador */
+#search-container {
+    position: relative;
+    z-index: 3;
+    padding: 20px;
+    margin-bottom: 30px; /* Mayor espacio inferior para separación */
+    background-color: #FFF8DC; /* Fondo beige claro */
+    border: 2px solid #FFD700; /* Borde dorado */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombras ligeras */
+}
+
+#search-bar {
+    width: 100%; /* Asegura que ocupe el ancho total del contenedor */
+    padding: 10px; /* Espaciado interno uniforme */
+    font-size: 1.2em; /* Tamaño de texto adecuado */
+    border: 2px solid #FFD700; /* Borde dorado */
+    border-radius: 5px; /* Bordes redondeados */
+    background-color: #FFFFFF; /* Fondo blanco */
+    color: #593818; /* Texto marrón oscuro */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombras ligeras */
+    box-sizing: border-box; /* Incluye el borde y padding en el ancho total */
+}
+
+#search-bar:focus {
+    border-color: #593818; /* Cambia el borde al enfocar */
+    outline: none;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Sombras más fuertes */
+}
+
+/* Contenedor del título "Filtrar por Categoría" */
+.filter-title {
+    font-size: 2.2em; /* Tamaño más pequeño pero visible */
+    font-weight: bold;
+    color: #8B4513; /* Marrón cálido */
+    text-align: center;
+    margin-bottom: 10px; /* Espaciado más cercano a los botones */
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3); /* Sombras ligeras */
+}
+
+/* Botones de categorías */
+.filter-buttons {
+    display: flex;
+    justify-content: center; /* Centra los botones */
+    gap: 10px; /* Espaciado entre botones */
+}
+
+.filter-buttons .filter-btn {
+    background-color: #FFF8DC; /* Fondo beige claro */
+    color: #593818; /* Texto marrón oscuro */
+    border: 2px solid #FFD700; /* Borde dorado */
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombras ligeras */
+}
+
+.filter-buttons .filter-btn:hover {
+    background-color: #FFD700; /* Cambio de fondo al dorado */
+    color: #FFFFFF; /* Texto blanco */
+    transform: scale(1.05); /* Efecto de agrandamiento */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombras más profundas */
+}
+
+/* Variables para el modo oscuro */
+body.dark-mode {
+    --fondo-principal: #1A1A1A; /* Fondo principal oscuro */
+    --fondo-secundario: #333333; /* Fondo secundario oscuro */
+    --texto-claro: #F5F5F5; /* Texto claro */
+    --texto-dorado: #FFD700; /* Texto dorado */
+    --boton-claro: #444444; /* Fondo de botones oscuro */
+    --hover-dorado: #FFD700; /* Hover dorado */
+    --hover-texto: #000000; /* Texto oscuro al hover */
+    --fondo-hover: #555555; /* Fondo en hover */
+    --sombra: rgba(0, 0, 0, 0.5); /* Sombras suaves */
+}
+
+/* Estilo general para el cuerpo */
+body.dark-mode {
+    background-color: var(--fondo-principal);
+    color: var(--texto-claro);
+    transition: all 0.3s ease; /* Animación para cambiar suavemente */
+}
+
+/* Encabezados y títulos */
+body.dark-mode h1, body.dark-mode h2, body.dark-mode h3 {
+    color: var(--texto-dorado);
+    text-shadow: 2px 2px 6px var(--sombra); /* Sombras para destacar */
+}
+
+/* Botones y elementos interactivos */
+body.dark-mode .filter-btn {
+    background-color: var(--boton-claro);
+    color: var(--texto-claro);
+    border: 2px solid var(--texto-dorado);
+    box-shadow: 0 2px 5px var(--sombra);
+    transition: all 0.3s ease;
+}
+
+body.dark-mode .filter-btn:hover {
+    background-color: var(--hover-dorado);
+    color: var(--hover-texto);
+    box-shadow: 0 4px 8px var(--sombra);
+}
+
+/* Fondo de secciones */
+body.dark-mode .menu, body.dark-mode .about, body.dark-mode #search-container {
+    background-color: var(--fondo-secundario);
+    box-shadow: 0 4px 10px var(--sombra);
+}
+
+/* Input y buscador */
+body.dark-mode #search-bar {
+    background-color: var(--boton-claro);
+    color: var(--texto-claro);
+    border: 2px solid var(--texto-dorado);
+}
+
+body.dark-mode #search-bar:focus {
+    background-color: var(--fondo-hover);
+    border-color: var(--texto-dorado);
+    box-shadow: 0 4px 10px var(--sombra);
+}
+
+/* Mensajes y elementos menores */
+body.dark-mode #no-results {
+    color: #FF6347; /* Texto rojo vibrante */
+}
+
+/* Imágenes y botones sociales */
+body.dark-mode .social-buttons img {
+    filter: brightness(85%);
+    transition: transform 0.5s ease, filter 0.3s ease;
+}
+
+body.dark-mode .social-buttons img:hover {
+    filter: brightness(100%);
+    transform: scale(1.2);
+}
+
+/* Grilla de menú */
+body.dark-mode .menu-item {
+    background-color: var(--boton-claro);
+    box-shadow: 0 4px 10px var(--sombra);
+}
+
+body.dark-mode .menu-item:hover {
+    background-color: var(--hover-dorado);
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px var(--sombra);
+}
+
+/* Encabezado en modo oscuro */
+body.dark-mode header {
+    background-color: #000000; /* Fondo negro intenso */
+    border-bottom: 2px solid #ffd900bd; /* Línea dorada decorativa */
+}
+
+/* Logo en modo oscuro */
+body.dark-mode .logo {
+    filter: brightness(90%); /* Oscurece ligeramente el logo */
+    box-shadow: 0 4px 8px rgba(255, 215, 0, 0.5); /* Sombras doradas suaves */
+}
+
+/* Texto en el encabezado (como el título) */
+body.dark-mode h1 {
+    color: #FFD700; /* Dorado vibrante */
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5); /* Sombras para resaltar */
+}
+
+/*ESTILO SWITCH
+/* Estilo del contenedor del switch */
+.dark-mode-switch {
+    position: absolute;
+    top: 20px; /* Ajusta según el diseño */
+    right: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1em;
+    color: #FFD700; /* Texto dorado */
+}
+
+/* Switch base */
+.dark-mode-switch input[type="checkbox"] {
+    appearance: none; /* Remueve estilo por defecto */
+    width: 50px;
+    height: 25px;
+    background-color: #444; /* Fondo oscuro */
+    border: 2px solid #FFD700; /* Borde dorado */
+    border-radius: 25px; /* Bordes redondeados */
+    position: relative;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+/* Círculo dentro del switch */
+.dark-mode-switch input[type="checkbox"]::before {
+    content: "";
+    position: absolute;
+    top: 50%; /* Centra verticalmente */
+    left: 3px; /* Posición inicial del círculo */
+    transform: translateY(-50%); /* Ajusta posición verticalmente */
+    width: 20px; /* Ancho del círculo */
+    height: 20px; /* Alto del círculo */
+    background-color: #FFD700; /* Color dorado */
+    border-radius: 50%; /* Forma circular */
+    transition: all 0.3s ease;
+}
+
+.dark-mode-switch input[type="checkbox"]:checked {
+    background-color: #333; /* Fondo más oscuro al activarse */
+}
+
+/* Cuando está activado */
+.dark-mode-switch input[type="checkbox"]:checked::before {
+    left: calc(100% - 23px); /* Calcula la posición derecha */
+}
+
+body.dark-mode .menu::before {
+    background-color: rgba(0, 0, 0, 0.95); /* Fondo casi negro */
+    filter: brightness(50%) blur(8px); /* Ajusta contraste y desenfoque */
+    opacity: 0.9;
+}
+
+@media (max-width: 768px) {
+    .dark-mode-switch {
+        top: 10px; /* Ajusta la posición superior */
+        right: 10px; /* Acerca el switch al borde */
+        gap: 5px; /* Reduce espacio entre switch y texto */
+        font-size: 0.9em; /* Tamaño más pequeño para pantallas reducidas */
+    }
+
+    .dark-mode-switch input[type="checkbox"] {
+        width: 40px; /* Reduce el tamaño del switch */
+        height: 20px;
+    }
+
+    .dark-mode-switch input[type="checkbox"]::before {
+        width: 15px; /* Tamaño reducido del círculo */
+        height: 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    #search-container {
+        padding: 10px; /* Reduce el espacio interno */
+        margin-bottom: 15px; /* Menor espacio entre secciones */
+    }
+
+    #search-bar {
+        font-size: 1em; /* Tamaño de texto más pequeño */
+        padding: 8px; /* Ajusta el espaciado interno */
+    }
+}
+
+@media (max-width: 768px) {
+    .filter-buttons {
+        flex-wrap: wrap; /* Permite que los botones se ajusten en varias filas */
+        gap: 5px; /* Reduce el espacio entre botones */
+    }
+
+    .filter-buttons .filter-btn {
+        padding: 8px 10px; /* Botones más compactos */
+        font-size: 1em; /* Texto más pequeño */
+    }
+}

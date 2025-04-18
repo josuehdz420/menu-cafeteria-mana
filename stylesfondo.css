@@ -1,3 +1,16 @@
+
+
+.menu {
+    position: relative;
+    padding: 40px 20px; /* Espaciado interno */
+    color: var(--texto); /* Mantén el texto legible */
+    background-image: url("assets/menufondo.jpg"); /* Imagen personalizada */
+    background-size: cover; /* Ajusta el tamaño del fondo */
+    background-position: center; /* Centra la imagen */
+    background-attachment: fixed; /* Activa el efecto de paralaje */
+    overflow: hidden; /* Asegura que no haya desbordes */
+}
+
 @media (max-width: 768px) {
     .welcome-section {
         height: 90vh; /* Ajustar altura en móviles */
@@ -181,6 +194,7 @@
         opacity: 0;
         transform: translateX(-100%);
     }
+
     to {
         opacity: 1;
         transform: translateX(0);
